@@ -20,7 +20,7 @@
   <h3 align="center">Arduino Temperature Meter</h3>
 
   <p align="center">
-    The program will show the current time. It will also display if the temperature is below or above the previous year's temperature for the current month.
+    The program will show the current time.<br />It will also display if the temperature is below or above the previous year's temperature for the current month.
     <br />
     <br />
     <a href="https://www.tinkercad.com/things/haS46JMN3yd-temperature-meter">View Demo</a>
