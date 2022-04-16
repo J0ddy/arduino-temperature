@@ -8,9 +8,9 @@ int currentDay, currentMonth, currentYear;
 void updateDateTime() {
   time_t theTime = time(NULL);
   struct tm *aTime = localtime(&theTime);
-  currentDay = aTime->tm_mday;
-  currentMonth = aTime->tm_mon + 1;
-  currentYear = aTime->tm_year + 1900;
+  currentDay = aTime->tm_mday+16;
+  currentMonth = aTime->tm_mon+4;
+  currentYear = aTime->tm_year+1922;
 }
 
 bool isTempHigherThanAvarage(int temp) {
@@ -23,22 +23,27 @@ void setup() {
   lcd.begin(16, 2);
   Serial.begin(9600);
 }
-
-void loop() {
-  lcd.setCursor(0,0);
-  lcd.clear();
+void PrintTemp() {
   int temp = map(((analogRead(pinTemp) - 20) * 3.04), 0, 1023, -40, 125);
   lcd.print("Temp: ");
   lcd.print(temp);
   lcd.print("C");
   if(isTempHigherThanAvarage(temp)) lcd.print(" Higher");
   else lcd.print(" Lower");
-  lcd.setCursor(0,1);
+}
+void PrintTime() {
   lcd.print("Date: ");
   lcd.print(currentDay);
   lcd.print("/");
   lcd.print(currentMonth);
   lcd.print("/");
   lcd.print(currentYear);
-  delay(1000);
+}
+void loop() {
+  lcd.setCursor(0,0);
+  lcd.clear();
+  PrintTemp();
+  lcd.setCursor(0,1);
+  PrintTime();
+  delay(10000);
 }
