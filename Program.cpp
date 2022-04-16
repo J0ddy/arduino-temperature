@@ -8,7 +8,6 @@ bool isTempHigherThanAvarage(int temp) {
   time_t theTime = time(NULL);
   struct tm *aTime = localtime(&theTime);
   int currentMonth = aTime->tm_mon + 1;
-  lcd.print(currentMonth);
   return temp>avarageTemps[currentMonth-1];
 }
 
