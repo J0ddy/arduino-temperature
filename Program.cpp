@@ -1,9 +1,16 @@
 #include <LiquidCrystal.h>
+#include <time.h>
 
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+int avarageTemps[12] = {0,3,7,12,15,21,23,23,19,13,7,2};
 
-//TODO: Add Data for each month's avarage temperature (As Array)
-//TODO: Add Method to check if the temperature is below or above avarage and update the second line to that information
+bool isTempHigherThanAvarage(int temp) {
+  time_t theTime = time(NULL);
+  struct tm *aTime = localtime(&theTime);
+  int currentMonth = aTime->tm_mon + 1;
+  lcd.print(currentMonth);
+  return temp>avarageTemps[currentMonth-1];
+}
 
 int pinTemp = A1;
 void setup() {
@@ -14,8 +21,10 @@ void setup() {
 void loop() {
   lcd.clear();
   int temp = map(((analogRead(pinTemp) - 20) * 3.04), 0, 1023, -40, 125);
-  lcd.print("Temperature: ");
+  lcd.print("Temp: ");
   lcd.print(temp);
   lcd.print("C");
+  if(isTempHigherThanAvarage(temp)) lcd.print(" Higher");
+  else lcd.print(" Lower");
   delay(1000);
 }
