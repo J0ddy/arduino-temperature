@@ -138,8 +138,6 @@ Project Link: [https://github.com/J0ddy/arduino-temperature](https://github.com/
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
 * [Choose an Open Source License](https://choosealicense.com)
 * [Img Shields](https://shields.io)
 * [Tinkercad](https://www.tinkercad.com/)
