@@ -88,6 +88,8 @@ This is meant to be used with an Arduino Uno and other components below. The pro
 - [x] Add Temperature Display
 - [x] Add Temperature Data for each month
 - [x] Display if the temperature is below or above the previous
+- [x] Add an LED
+- [x] Publish Project
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
