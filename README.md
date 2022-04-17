@@ -158,5 +158,5 @@ Use this space to list resources you find helpful and would like to give credit 
 [issues-shield]: https://img.shields.io/github/issues/J0ddy/arduino-temperature.svg?style=for-the-badge
 [issues-url]: https://github.com/J0ddy/arduino-temperature/issues
 [license-shield]: https://img.shields.io/github/license/J0ddy/arduino-temperature.svg?style=for-the-badge
-[license-url]: https://github.com/J0ddy/arduino-temperature/blob/master/LICENSE
+[license-url]: https://github.com/J0ddy/arduino-temperature/blob/main/LICENSE
 [product-screenshot]: Project.png
