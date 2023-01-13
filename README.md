@@ -157,4 +157,4 @@ Project Link: [https://github.com/J0ddy/arduino-temperature](https://github.com/
 [issues-url]: https://github.com/J0ddy/arduino-temperature/issues
 [license-shield]: https://img.shields.io/github/license/J0ddy/arduino-temperature.svg?style=for-the-badge
 [license-url]: https://github.com/J0ddy/arduino-temperature/blob/main/LICENSE
-[product-screenshot]: Project.png
+[product-screenshot]: https://i.jod.gg/YUXA1/BUcoceWo00/raw.png
